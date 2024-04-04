@@ -2,6 +2,8 @@
 
 This is a collection of settings/code/config for MPV to be used for archival/digitization quality-control checks.
 
+![example screenshot](screenshots/example1.png)
+
 Some of these modifications are original, some are based on default options that weren't used by default - and others came from existing 3rd party user contributions published online.
 
 # Features
