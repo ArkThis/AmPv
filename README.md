@@ -13,4 +13,4 @@ Some of these modifications are original, some are based on default options that
   * 
 
 
-This player setup is sponsored, and used by the [Austrian Mediathek](www.mediathek.at).
+This player setup is sponsored, and used by the [Austrian Mediathek](https://www.mediathek.at/)
