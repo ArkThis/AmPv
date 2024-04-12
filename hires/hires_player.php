@@ -9,6 +9,7 @@
  * URL: hires://@video-cube1/dva-profession/workflow/03-capture_export2/final/dva-00003/hires/dva-00003-000.mkv?start=0:00:04.19&pause
  */
 
+$profile = 'dva-profession';    // MPV config profile to load/use.
 $debug = false;                 // Set to 'true' for verbose information.
 $mpv_bin = "mpv";
 $URL = $argv[1];                // 1st argument to this script is a video-file URL.
@@ -32,12 +33,13 @@ parse_str($parts['query'], $params);
  */
 function set_player_options($params)
 {
+    global $profile;
+
     $player_opts = array();
     
     // Default options:
-    $player_opts[] = "--ontop";             // Stay above all other windows.
-    //$player_opts[] = "--video-unscaled";    // Show the video as-is. pixel-exact.
-    //$player_opts[] = "--autofit=70%x60%";   // Scale the window nicely.
+    $player_opts[] = "--ontop";                 // Stay above all other windows.
+    $player_opts[] = "--profile=".$profile;     // Load config profile for this job.
 
     // Playback offset:
     if (isset($params['start'])) {
