@@ -10,6 +10,14 @@ local port = 12345
 local timeout = 0.5
 local timer = timeout
 
+-- Read framerate from source video to calculate seek-offset timings.
+-- NOTE: This currently does NOT work with complex filters applied (in other scripts)
+--       that change the framerate.
+local fps = mp.get_property_native("container-fps")
+-- Workaround: Hardcoded. :(
+-- Disable this line if you're NOT using complex filters anywhere:
+local fps = 25
+
 
 -- Create a TCP socket and bind it to the localhost, on port 12345
 local server = assert(socket.bind(host, port))
@@ -54,7 +62,6 @@ function handle_msg(msg)
        print("key: " .. k .. " / value: " .. v)
 
        if k == 'seekframe' then
-           local fps = mp.get_property_native("container-fps")
            local pos = t['seekframe'] / fps
            print("seek to frame: " .. pos)
            mp.commandv("seek", pos, "absolute", "exact")
