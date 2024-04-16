@@ -1,6 +1,13 @@
 # Overview
 
-This is a collection of settings/code/config for MPV to be used for archival/digitization quality-control checks.
+AmPv = Archival MPV
+
+This is a collection of settings/code/config for MPV to be used for archival/digitization use cases, like:
+
+  * Quality control (digitization ingest)
+  * Frame-precise seeking
+  * Audio analysis
+  * ...
 
 ![example screenshot](screenshots/example1.png)
 
