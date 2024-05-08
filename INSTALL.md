@@ -33,7 +33,7 @@ This folder contains all necessary files required to setup ingest clients.
 
 In `hires_player.desktop`, make sure the path/command is correct:
 
-`Exec=/srv/dva-profession/client_config/linux/mpv/hires/hires_player.php %u`
+`Exec=/srv/dva-profession/client_config/mpv/hires/hires_player.php %u`
 
 
 Then copy the file `hires_player.desktop` to `~/.local/share applications`:

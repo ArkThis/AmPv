@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=DVA-Profession Video Player
-Exec=/srv/dva-profession/client_config/linux/mpv/hires/hires_player.php %u
+Exec=/srv/dva-profession/client_config/mpv/hires/hires_player.php %u
 Icon=multimedia-video-player
 Type=Application
 Terminal=true
