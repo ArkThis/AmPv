@@ -15,7 +15,7 @@ So make sure your launcher works properly before debugging the browser side.
 
 ## Install required packages
 
-`$ sudo apt install php-cli mpv lua-socket`
+`$ sudo apt install mpv lua-socket php-cli`
 
 NOTE: Open `mpv` player at least once, so it creates its config folder in `~/.config/mpv`.
 
