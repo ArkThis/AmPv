@@ -15,6 +15,13 @@ $mpv_bin = "mpv";
 $URL = $argv[1];                // 1st argument to this script is a video-file URL.
 $parts = parse_url($URL);
 
+// Default options:
+$player_opts = array();         // Array with arguments/options to pass on to the player.
+$player_opts[] = "--ontop";                 // Stay above all other windows.
+$player_opts[] = "--profile=".$profile;     // Load config profile for this job.
+
+// --------------------------------------
+
 if ($debug) {                   // DEBUG
     printf("URL: %s\n", $URL);
     print_r($parts);
@@ -31,16 +38,8 @@ parse_str($parts['query'], $params);
  * Add more options however needed. This is where you translate from URL
  * parameters to player options/syntax.
  */
-function set_player_options($params)
+function set_player_options($params, $player_opts)
 {
-    global $profile;
-
-    $player_opts = array();
-    
-    // Default options:
-    $player_opts[] = "--ontop";                 // Stay above all other windows.
-    $player_opts[] = "--profile=".$profile;     // Load config profile for this job.
-
     // Playback offset:
     if (isset($params['start'])) {
         $player_opts[] = "--start=".$params['start'];
@@ -67,7 +66,7 @@ $video = "smb://".$parts['user']."@".$parts['host'].$parts['path'];
 if ($debug) { printf("Video file: %s\n", $video); }
 
 // The command to call the player with:
-$player_opts_str = implode(' ', set_player_options($params));
+$player_opts_str = implode(' ', set_player_options($params, $player_opts));
 $cmd="$mpv_bin $player_opts_str $video";
 if ($debug) { echo "$cmd"; }
 
