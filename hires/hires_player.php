@@ -76,5 +76,9 @@ if (passthru($cmd, $result_code) === false) {
     sleep(5);
 }
 
+if ($debug) {
+    sleep(20);      // Keeps the shell-window open to see possible errors.
+}
+
 exit;
 ?>
