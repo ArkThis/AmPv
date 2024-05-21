@@ -55,5 +55,5 @@ To quickly check if your scheme was registered, run:
 
 ## Install Lua script for remote controlling MPV
 
-`$ cp -av /srv/dva-profession/client_config/linux/mpv/config/* ~/.config/mpv/`
+`$ cp -av /srv/dva-profession/client_config/mpv/config/* ~/.config/mpv/`
 
