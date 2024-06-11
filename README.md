@@ -35,3 +35,4 @@ This player setup is sponsored, and used by the [Austrian Mediathek](https://www
   * `f` : fullscreen
   * `<space>` : playback/pause
   * `I` : (toggle) show technical information (resolution, fps, samplerate, etc)
+  * `q` : Quit/exit player.
