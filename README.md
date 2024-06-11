@@ -17,6 +17,7 @@ Some of these modifications are original, some are based on default options that
 
   * Remote control (TCP)
   * Display audio waveform
+  * Does not upscale the video image
   * Copy playback position to clipboard
   * Display playback position in millisecond-precision
 
