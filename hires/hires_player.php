@@ -71,7 +71,7 @@ $cmd="$mpv_bin $player_opts_str $video";
 if ($debug) { echo "$cmd"; }
 
 // Start the player / run the command:
-if (passthru($cmd, $result_code) === false) {
+passthru($cmd, $result_code);
 
 // If that returned an error (non-zero result), show an error and wait:
 if ($result_code != 0) {
