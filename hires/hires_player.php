@@ -72,8 +72,11 @@ if ($debug) { echo "$cmd"; }
 
 // Start the player / run the command:
 if (passthru($cmd, $result_code) === false) {
+
+// If that returned an error (non-zero result), show an error and wait:
+if ($result_code != 0) {
     printf("Error (%d) running command: %s", $result_code, $cmd);
-    sleep(5);
+    sleep(15);
 }
 
 if ($debug) {
