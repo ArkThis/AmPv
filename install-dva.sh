@@ -10,6 +10,9 @@ DVA_DIR="/srv/dva-profession"                   # Local DVA base folder
 DVA_WORKFLOW="$DVA_DIR/workflow"                # Workflow structure
 DVA_CLIENT_CONFIG="$DVA_DIR/client_config"      # Configuration for the ingest client
 
+SCRIPT_DIR=$(dirname "$0")
+PWD=$(pwd)
+
 # -------------------------------------------
 
 
@@ -22,7 +25,7 @@ sudo apt install mpv lua-socket php-cli
 
 echo ""
 echo "Copy the hires-URI launcher to local pool in '$DIR_LAUNCHERS'..." 
-sudo cp -v hires/hires_player.desktop $DIR_LAUNCHERS
+sudo cp -v $SCRIPT_DIR/hires/hires_player.desktop $DIR_LAUNCHERS
 
 echo ""
 echo "And associate the URI prefix 'hires://' with it..."
