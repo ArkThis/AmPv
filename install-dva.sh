@@ -21,7 +21,7 @@ set -e
 
 echo ""
 echo "Installing required packages..."
-sudo apt install mpv lua-socket php-cli
+sudo apt install mpv lua-socket php-cli xclip
 
 echo ""
 echo "Copy the hires-URI launcher to local pool in '$DIR_LAUNCHERS'..." 
